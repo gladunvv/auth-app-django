@@ -139,6 +139,8 @@ LOGIN_REDIRECT_URL = '/friends'
 
 # Developer key for VK
 
+
+
 SOCIAL_AUTH_VK_OAUTH2_KEY = ''
 SOCIAL_AUTH_VK_OAUTH2_SECRET = ''
 
