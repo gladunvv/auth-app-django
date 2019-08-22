@@ -10,7 +10,6 @@
         <img class="user__img" src="{{ user.photo_100 }}" alt="">
     </div>
 
-
     <div class="container">
     {% for friend in friends.items %}
       <a class="card" href="https://vk.com/{{ friend.domain }}" >
@@ -27,5 +26,6 @@
         </a>
         {% endfor %}
       </div>
+      <a class="button general-wrapper__button" href="{% url 'logout' %}">ВЫЙТИ</a>
 {% endblock content %}
 

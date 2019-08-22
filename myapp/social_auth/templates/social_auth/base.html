@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="{% static "style.css"%}" />
     <title>{% block title %}{% endblock %}</title>
   </head>
-  <body>
-
+  <body class="body">
+    <input id="theme-switcher" type="checkbox">
+    
     {% block content %}
-
+    
     {% endblock content %}
-
+    
+    <script src="{% static "js/theme.js"%}"></script>
   </body>
 </html>
