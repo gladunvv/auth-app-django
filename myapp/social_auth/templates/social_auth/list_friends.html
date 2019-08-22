@@ -1,12 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h3>{{ response }}</h3>
-  </body>
-</html>
+{% extends 'social_auth/base.html' %}
+{% load static %}
+
+{% block title %} Друзья ВК {% endblock %}
+
+{% block content %}
+  <div class="general-wrapper">
+    <div class="user">
+        <h2 class="user__name">{{user.first_name}} {{user.last_name}}</h2>
+        <img class="user__img" src="{{ user.photo_100 }}" alt="">
+    </div>
+
+
+    <div class="container">
+    {% for friend in friends.items %}
+      <a class="card" href="https://vk.com/{{ friend.domain }}" >
+        <div class="card__body">
+          <h3 class="title">{{ friend.first_name }} {{ friend.last_name }}</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+              <img class="card__image" src={{ friend.photo_100 }} alt="" />
+          </div>
+        </div>
+        </a>
+        {% endfor %}
+      </div>
+{% endblock content %}
+

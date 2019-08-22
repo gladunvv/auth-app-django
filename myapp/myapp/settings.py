@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'social_django',
+    
 
     'social_auth.apps.SocialAuthConfig'
 ]
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 # бекенд авторизации через ВКонтакт
 
@@ -134,21 +136,11 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/friends'
 
-
-SOCIAL_AUTH_PIPELINE = (
-    'social_core.pipeline.social_auth.social_details',
-    'social_core.pipeline.social_auth.social_uid',
-    'social_core.pipeline.social_auth.social_user',
-    'social_core.pipeline.user.get_username',
-    'social_core.pipeline.user.create_user',
-    'social_core.pipeline.social_auth.associate_user',
-    'social_core.pipeline.social_auth.load_extra_data',
-    'social_core.pipeline.user.user_details',
-    'social_core.pipeline.social_auth.associate_by_email',
-)
-
-
 # Developer key for VK
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = ''
 SOCIAL_AUTH_VK_OAUTH2_SECRET = ''
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
