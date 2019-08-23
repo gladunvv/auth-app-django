@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '26yju*4u7lt7@61=cplvg03h03xwdcf)s&#mr)ovz6tmk24^lh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -39,13 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'social_django',
-    
 
     'social_auth.apps.SocialAuthConfig'
 ]
 
 MIDDLEWARE = [
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -139,13 +137,11 @@ LOGIN_REDIRECT_URL = '/friends'
 
 # Developer key for VK
 
-
 SOCIAL_AUTH_VK_OAUTH2_KEY = '7106434'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = 'bPO5iN9QgpvbZaXRVctJ'
 
-# PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
