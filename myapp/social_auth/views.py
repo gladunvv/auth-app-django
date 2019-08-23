@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from django.views.generic import TemplateView
 from django.contrib.auth import logout
 from social_django.models import UserSocialAuth
@@ -12,7 +12,7 @@ class StartedScreenView(TemplateView):
         if request.user.is_authenticated:
             return HttpResponseRedirect('friends')
         else:
-            return HttpResponseRedirect('started_screen')
+            return HttpResponse(self.template_name)
 
 
 class RequestFriends(TemplateView):
