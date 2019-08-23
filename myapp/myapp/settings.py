@@ -137,8 +137,8 @@ LOGIN_REDIRECT_URL = '/friends'
 
 # Developer key for VK
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = '7106434'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'bPO5iN9QgpvbZaXRVctJ'
+SOCIAL_AUTH_VK_OAUTH2_KEY = '***'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = '***'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
