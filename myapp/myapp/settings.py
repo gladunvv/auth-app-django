@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '26yju*4u7lt7@61=cplvg03h03xwdcf)s&#mr)ovz6tmk24^lh'
+SECRET_KEY = '***'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -137,8 +137,8 @@ LOGIN_REDIRECT_URL = '/friends'
 
 # Developer key for VK
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = '7106434'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'bPO5iN9QgpvbZaXRVctJ'
+SOCIAL_AUTH_VK_OAUTH2_KEY = '***'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = '***'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'

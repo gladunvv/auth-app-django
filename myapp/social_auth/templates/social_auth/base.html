@@ -2,19 +2,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="{% static "style.css"%}" />
-    <title>{% block title %}{% endblock %}</title>
-  </head>
-  <body class="body">
-    <input id="theme-switcher" type="checkbox">
-    
-    {% block content %}
-    
-    {% endblock content %}
-    
-    <script src="{% static "js/theme.js"%}"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="{% static "style.css"%}" />
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="body">
+  <input id="theme-switcher" type="checkbox">
+
+  {% block content %}
+
+  {% endblock content %}
+
+  <script src="{% static "js/theme.js"%}"></script>
+</body>
+
 </html>
