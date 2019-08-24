@@ -1,7 +1,7 @@
 import requests
 
-
 def vk_api_requests(user_token, *args, **kwargs):
+    """Функция для обращения к API Вконтакте, возвращает json в зависимости от методаы"""
 
     COUNT = '5'
     METHOD_NAME = kwargs['method']

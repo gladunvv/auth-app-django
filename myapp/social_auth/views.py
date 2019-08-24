@@ -1,11 +1,14 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.contrib.auth import logout
+
 from social_django.models import UserSocialAuth
 from social_auth.api_requests import vk_api_requests
 
 
 class StartedScreenView(TemplateView):
+    """Класс стартового экрана приложения, где проходит проверка на авторизацию"""
+
     template_name = "social_auth/started_screen.html"
 
     def get(self, request, *args, **kwargs):
@@ -15,7 +18,9 @@ class StartedScreenView(TemplateView):
             return render(request, self.template_name)
 
 
-class RequestFriends(TemplateView):
+class RequestFriendsView(TemplateView):
+    """Основной класс приложения для идентификации пользователя и запроса к ВК API"""
+
     template_name = "social_auth/list_friends.html"
 
     def get(self, request, *args, **kwargs):
@@ -31,11 +36,12 @@ class RequestFriends(TemplateView):
 
             return render(request, self.template_name, context=context)
         else:
-            return HttpResponseRedirect('started_screen')
-
+            return HttpResponseRedirect('/')
 
 
 class LogoutView(TemplateView):
+    """Класс отвечающий за выход из приложения"""
+
     def get(self, request):
         logout(request)
         return HttpResponseRedirect('/')
